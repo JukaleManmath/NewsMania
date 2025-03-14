@@ -1,0 +1,23 @@
+2025-03-13 22:25:32.326 EDT [12092] LOG:  starting PostgreSQL 14.17 (Homebrew) on aarch64-apple-darwin24.2.0, compiled by Apple clang version 16.0.0 (clang-1600.0.26.6), 64-bit
+2025-03-13 22:25:32.327 EDT [12092] LOG:  could not bind IPv6 address "::1": Address already in use
+2025-03-13 22:25:32.327 EDT [12092] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2025-03-13 22:25:32.327 EDT [12092] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2025-03-13 22:25:32.327 EDT [12092] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2025-03-13 22:25:32.327 EDT [12092] WARNING:  could not create listen socket for "localhost"
+2025-03-13 22:25:32.327 EDT [12092] FATAL:  could not create any TCP/IP sockets
+2025-03-13 22:25:32.327 EDT [12092] LOG:  database system is shut down
+2025-03-13 22:27:11.442 EDT [12402] LOG:  starting PostgreSQL 14.17 (Homebrew) on aarch64-apple-darwin24.2.0, compiled by Apple clang version 16.0.0 (clang-1600.0.26.6), 64-bit
+2025-03-13 22:27:11.443 EDT [12402] LOG:  listening on IPv6 address "::1", port 5432
+2025-03-13 22:27:11.443 EDT [12402] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-03-13 22:27:11.444 EDT [12402] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-03-13 22:27:11.445 EDT [12403] LOG:  database system was shut down at 2025-03-13 22:25:06 EDT
+2025-03-13 22:27:11.447 EDT [12402] LOG:  database system is ready to accept connections
+2025-03-13 22:27:27.293 EDT [12424] FATAL:  role "postgres" does not exist
+2025-03-13 22:29:12.428 EDT [12449] FATAL:  database "manmathjukale" does not exist
+2025-03-13 22:29:57.243 EDT [12472] FATAL:  role "postgresql@14" does not exist
+2025-03-13 22:31:17.590 EDT [12486] FATAL:  role "postgres" does not exist
+2025-03-13 22:31:27.205 EDT [12498] FATAL:  role "postgres" does not exist
+2025-03-13 22:31:37.689 EDT [12510] ERROR:  database "postgres" already exists
+2025-03-13 22:31:37.689 EDT [12510] STATEMENT:  CREATE DATABASE postgres;
+2025-03-13 22:32:15.192 EDT [12531] FATAL:  lock file "postmaster.pid" already exists
+2025-03-13 22:32:15.192 EDT [12531] HINT:  Is another postmaster (PID 12402) running in data directory "/Users/manmathjukale/Desktop/NewsPulse/newspulse-backend/pg_data"?
