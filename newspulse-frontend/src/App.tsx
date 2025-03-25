@@ -1,12 +1,22 @@
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import NewsCategory from "./pages/NewsCategory";
+import Navbar from "./components/Navbar";
+import SearchResults from "./pages/SearchResults";
+import AuthCallback from "./pages/AuthCallback";
 
 function App() {
-
   return (
-    <div className="bg-blue-500 text-white text-3xl font-bold p-4">
-    🚀 NewsPulse with Tailwind + Vite!
-    </div>
-  )
+    <Router>
+      <Navbar />
+      <Routes >
+        <Route path="/" element={<Home />} />
+        <Route path="/category/:category" element={<NewsCategory />} />
+        <Route path="/search" element={<SearchResults />} />
+        <Route path="/auth/callback" element={<AuthCallback />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
