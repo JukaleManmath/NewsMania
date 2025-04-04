@@ -1,4 +1,4 @@
-from fastapi import APIRouter , Request, HTTPException
+from fastapi import APIRouter , Request, HTTPException, Depends
 from fastapi.responses import RedirectResponse , JSONResponse
 import httpx
 import os
@@ -6,6 +6,7 @@ from jose import JWTError, jwt
 from datetime import datetime, timedelta , timezone
 from dotenv import load_dotenv
 from urllib.parse import urlencode
+from app.dependencies.auth import get_current_user
 
 load_dotenv()
 
@@ -87,7 +88,12 @@ async def google_callback(request: Request):
     }
 
     token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)
+    print("🔐 SECRET_KEY used:", SECRET_KEY)
 
     # Redirect to frontend with token
     redirect_to = f"http://localhost:5173/auth/callback?token={token}"
     return RedirectResponse(redirect_to)
+
+@router.get("/me")
+async def get_me(user: dict = Depends(get_current_user)):
+    return user

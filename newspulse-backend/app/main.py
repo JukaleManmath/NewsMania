@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routes import news, auth
+from app.routes import news, auth, saved_articles
 from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -13,3 +13,4 @@ app.add_middleware(
 )
 app.include_router(news.router, prefix="/api")
 app.include_router(auth.router, prefix="/auth")
+app.include_router(saved_articles.router)

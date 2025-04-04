@@ -3,7 +3,7 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from app.config import NEWS_API_KEY
 from app.database import get_database
-from app.models import NewsArticles
+from app.models.news_article import NewsArticles
 from app.services.nlp import categorize_articles
 from app.cache import redis_client
 
